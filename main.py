@@ -8,7 +8,6 @@ import time
 import pyfiglet
 import requests
 from colorama import Fore
-from luhn import verify
 
 print(f'''{Fore.BLUE}
 ▄▄▄      ▒███████▒  ██████  ▄████▄       ▄████ ▓█████  ███▄    █ 
@@ -37,20 +36,13 @@ time.sleep(3)
 while True:
 
         cc = ('').join(random.choices(string.digits, k=8))
-       
-        card = BIN + cc 
-        check = verify(card)
-        if check == True:
 
-                print(f"{Fore.GREEN}[>] {card} is a valid Store Card!")
+
+                print(f"{Fore.GREEN}[>] {cc} is a valid Store Card!")
                 f = open("cards.txt",'a')
                 f.write(f"{card}\n")
-                f.close()
-                time.sleep(1)
+
                 
 
-        else:
-         print(f"{Fore.RED}[!] {card} is not a valid Store Card!")
-         time.sleep(1)
 
 
