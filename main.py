@@ -35,12 +35,12 @@ print(f"{Fore.BLUE}[/] Starting.")
 time.sleep(3)
 while True:
 
-        cc = ('').join(random.choices(string.digits, k=8))
+cc = ('').join(random.choices(string.digits, k=8))
 
 
-                print(f"{Fore.GREEN}[>] {cc} is a valid Store Card!")
-                f = open("cards.txt",'a')
-                f.write(f"{card}\n")
+print(f"{Fore.GREEN}[>] {cc} is a valid Store Card!")
+f = open("cards.txt",'a')
+f.write(f"{card}\n")
 
                 
 
